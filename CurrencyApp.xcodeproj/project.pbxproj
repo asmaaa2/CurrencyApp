@@ -108,6 +108,36 @@
 			path = CurrencyAppUITests;
 			sourceTree = "<group>";
 		};
+		064E001B2A2D25AF00A1F6F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		064E001C2A2D25B800A1F6F8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		064E001F2A2D263900A1F6F8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		064E00202A2D264900A1F6F8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				064EFFF12A2D240800A1F6F8 /* Main.storyboard */,
+				064EFFF62A2D240900A1F6F8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		064EFFDF2A2D240800A1F6F8 = {
 			isa = PBXGroup;
 			children = (
@@ -133,12 +163,14 @@
 		064EFFEA2A2D240800A1F6F8 /* CurrencyApp */ = {
 			isa = PBXGroup;
 			children = (
+				064E001B2A2D25AF00A1F6F8 /* Model */,
+				064E001C2A2D25B800A1F6F8 /* ViewModel */,
+				064E001F2A2D263900A1F6F8 /* ViewControllers */,
+				064E00202A2D264900A1F6F8 /* Storyboards */,
 				064EFFEB2A2D240800A1F6F8 /* AppDelegate.swift */,
 				064EFFED2A2D240800A1F6F8 /* SceneDelegate.swift */,
 				064EFFEF2A2D240800A1F6F8 /* ViewController.swift */,
-				064EFFF12A2D240800A1F6F8 /* Main.storyboard */,
 				064EFFF42A2D240900A1F6F8 /* Assets.xcassets */,
-				064EFFF62A2D240900A1F6F8 /* LaunchScreen.storyboard */,
 				064EFFF92A2D240900A1F6F8 /* Info.plist */,
 			);
 			path = CurrencyApp;
@@ -154,7 +186,6 @@
 				74C451CCFAC06E2C6A7BC17D /* Pods-CurrencyAppTests.debug.xcconfig */,
 				DD250C4E7411CF4E86F0DCCF /* Pods-CurrencyAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
