@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fxm-eI-0ub">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Currency Details View Controller-->
+        <scene sceneID="h0a-Qt-WN4">
+            <objects>
+                <viewController storyboardIdentifier="CurrencyDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QpO-MB-mZs" customClass="CurrencyDetailsViewController" customModule="CurrencyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qjq-yq-ahj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCd-Z7-Xk4">
+                                <rect key="frame" x="0.0" y="48" width="203" height="814"/>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgJ-q8-WQ6">
+                                <rect key="frame" x="211" y="48" width="203" height="814"/>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4oe-mo-qJh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aCd-Z7-Xk4" firstAttribute="top" secondItem="4oe-mo-qJh" secondAttribute="top" id="7NM-oD-Ecy"/>
+                            <constraint firstItem="fgJ-q8-WQ6" firstAttribute="width" secondItem="qjq-yq-ahj" secondAttribute="width" multiplier="0.49" id="PzE-zy-bVk"/>
+                            <constraint firstItem="aCd-Z7-Xk4" firstAttribute="leading" secondItem="4oe-mo-qJh" secondAttribute="leading" id="Qa8-bm-k1k"/>
+                            <constraint firstItem="4oe-mo-qJh" firstAttribute="bottom" secondItem="aCd-Z7-Xk4" secondAttribute="bottom" id="RZO-9Y-2fD"/>
+                            <constraint firstItem="fgJ-q8-WQ6" firstAttribute="top" secondItem="4oe-mo-qJh" secondAttribute="top" id="iAp-as-VRN"/>
+                            <constraint firstAttribute="trailing" secondItem="fgJ-q8-WQ6" secondAttribute="trailing" id="ljt-99-ke6"/>
+                            <constraint firstItem="4oe-mo-qJh" firstAttribute="bottom" secondItem="fgJ-q8-WQ6" secondAttribute="bottom" id="nJd-gB-4hC"/>
+                            <constraint firstItem="aCd-Z7-Xk4" firstAttribute="width" secondItem="qjq-yq-ahj" secondAttribute="width" multiplier="0.49" id="zd5-oY-zCa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="historicalView" destination="aCd-Z7-Xk4" id="RCw-hK-31Y"/>
+                        <outlet property="otherCurrencyView" destination="fgJ-q8-WQ6" id="uau-6Y-95a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gQR-FY-cgo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3666.666666666667" y="60.9375"/>
+        </scene>
+        <!--Currency Data Table View Controller-->
+        <scene sceneID="JzX-zb-uby">
+            <objects>
+                <viewController storyboardIdentifier="CurrencyDataTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g7o-Cr-dCb" customClass="CurrencyDataTableViewController" customModule="CurrencyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DNb-lf-1u0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wGy-DG-aMQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KdJ-n3-dLe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wGy-DG-aMQ" firstAttribute="leading" secondItem="DNb-lf-1u0" secondAttribute="leading" id="McE-j9-KVD"/>
+                            <constraint firstAttribute="bottom" secondItem="wGy-DG-aMQ" secondAttribute="bottom" id="OB5-yw-sIn"/>
+                            <constraint firstAttribute="trailing" secondItem="wGy-DG-aMQ" secondAttribute="trailing" id="RoB-vf-2pM"/>
+                            <constraint firstItem="wGy-DG-aMQ" firstAttribute="top" secondItem="DNb-lf-1u0" secondAttribute="top" id="SAg-eE-Bj3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="wGy-DG-aMQ" id="TWZ-em-45U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IHy-rR-2ze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3596" y="-619"/>
+        </scene>
+        <!--Convert Currency View Controller-->
+        <scene sceneID="0Ff-Rw-GEJ">
+            <objects>
+                <viewController id="5VD-Hw-ZVg" customClass="ConvertCurrencyViewController" customModule="CurrencyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bAj-4G-h5x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eKK-Lf-amq">
+                                <rect key="frame" x="20" y="192" width="374" height="44"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="EGP" borderStyle="roundedRect" placeholder="From" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="veo-rL-Zzb" customClass="PickerTextField" customModule="CurrencyApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYv-0r-zBs">
+                                        <rect key="frame" x="162" y="0.0" width="50" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="hhv-Tb-R9J"/>
+                                            <constraint firstAttribute="width" constant="50" id="twc-po-5YQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ConvertArrows"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="INR" borderStyle="roundedRect" placeholder="To" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0X6-WO-GXc" customClass="PickerTextField" customModule="CurrencyApp" customModuleProvider="target">
+                                        <rect key="frame" x="232" y="0.0" width="142" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="veo-rL-Zzb" firstAttribute="width" secondItem="0X6-WO-GXc" secondAttribute="width" id="RVm-nq-RXL"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ezq-PX-WOr">
+                                <rect key="frame" x="20" y="266" width="142" height="34"/>
+                                <color key="backgroundColor" red="0.98187822160000005" green="0.81788575600000002" blue="0.81863706069999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iIp-Vj-v7i">
+                                <rect key="frame" x="252" y="266" width="142" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.83298085033109248" blue="0.83374602126199848" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGT-DZ-j48">
+                                <rect key="frame" x="157" y="360" width="100" height="34.5"/>
+                                <color key="backgroundColor" red="0.64141492560966729" green="0.27768359097647222" blue="0.25023599838128391" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ole-EY-0vT"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Deatils"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EWf-BP-KdP"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iIp-Vj-v7i" firstAttribute="centerY" secondItem="Ezq-PX-WOr" secondAttribute="centerY" id="2BF-7M-eEF"/>
+                            <constraint firstItem="Ezq-PX-WOr" firstAttribute="width" secondItem="veo-rL-Zzb" secondAttribute="width" id="E7a-t5-KAw"/>
+                            <constraint firstItem="Ezq-PX-WOr" firstAttribute="top" secondItem="eKK-Lf-amq" secondAttribute="bottom" constant="30" id="EJU-Ye-kKr"/>
+                            <constraint firstItem="iIp-Vj-v7i" firstAttribute="leading" secondItem="0X6-WO-GXc" secondAttribute="leading" id="Hdh-bP-clD"/>
+                            <constraint firstItem="UGT-DZ-j48" firstAttribute="top" secondItem="Ezq-PX-WOr" secondAttribute="bottom" constant="60" id="Olp-Ke-qXG"/>
+                            <constraint firstItem="eKK-Lf-amq" firstAttribute="top" secondItem="EWf-BP-KdP" secondAttribute="top" constant="100" id="PBK-9x-su5"/>
+                            <constraint firstItem="iIp-Vj-v7i" firstAttribute="width" secondItem="Ezq-PX-WOr" secondAttribute="width" id="RbD-eW-26D"/>
+                            <constraint firstItem="Ezq-PX-WOr" firstAttribute="leading" secondItem="veo-rL-Zzb" secondAttribute="leading" id="U6m-XC-0Vj"/>
+                            <constraint firstItem="eKK-Lf-amq" firstAttribute="leading" secondItem="EWf-BP-KdP" secondAttribute="leading" constant="20" id="fY1-l9-qzb"/>
+                            <constraint firstItem="EWf-BP-KdP" firstAttribute="trailing" secondItem="eKK-Lf-amq" secondAttribute="trailing" constant="20" id="n7G-0c-MCL"/>
+                            <constraint firstItem="UGT-DZ-j48" firstAttribute="centerX" secondItem="bAj-4G-h5x" secondAttribute="centerX" id="r0u-21-wLM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fQh-oy-yrP"/>
+                    <connections>
+                        <outlet property="convertedCurrencyTextField" destination="iIp-Vj-v7i" id="oaP-C1-A6J"/>
+                        <outlet property="detailsButton" destination="UGT-DZ-j48" id="UGl-dg-ecV"/>
+                        <outlet property="fromTextField" destination="veo-rL-Zzb" id="SMb-Ah-sm0"/>
+                        <outlet property="inputCurrencyTextField" destination="Ezq-PX-WOr" id="llH-dM-TfV"/>
+                        <outlet property="swapButton" destination="VYv-0r-zBs" id="XeS-31-Jch"/>
+                        <outlet property="toTextField" destination="0X6-WO-GXc" id="NfP-r0-xDn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I4P-ua-NM4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2749.275362318841" y="68.973214285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fq5-zB-Qvg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fxm-eI-0ub" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KUX-Mf-5To">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5VD-Hw-ZVg" kind="relationship" relationship="rootViewController" id="doD-ZS-8ps"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wWD-7N-UI6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839.1304347826087" y="68.973214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ConvertArrows" width="24" height="24"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

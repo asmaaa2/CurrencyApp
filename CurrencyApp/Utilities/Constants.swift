@@ -1,36 +1,42 @@
 //
-//  Constants.swift
+//  StringConstants.swift
 //  CurrencyApp
 //
-//  Created by Mahmoud Abdul-wahab on 12/11/2022.
+//  Created by Asmaa Oraby on 05/06/2023.
 //
 
 import Foundation
-enum Constants {
-    static var apiKey: String {
-      get {
-        guard let filePath = Bundle.main.path(forResource: "Info", ofType: "plist") else {
-          fatalError("Couldn't find file 'Info.plist'.")
-        }
-        let plist = NSDictionary(contentsOfFile: filePath)
-        guard let value = plist?.object(forKey: "AccessKey") as? String else {
-          fatalError("Couldn't find key 'API_KEY' in 'Info.plist'.")
-        }
-        return value
-      }
-    }
+
+struct StringConstants {
     
-    static var baseURL: String {
-     get {
-       guard let filePath = Bundle.main.path(forResource: "Info", ofType: "plist") else {
-         fatalError("Couldn't find file 'Info.plist'.")
-       }
-       let plist = NSDictionary(contentsOfFile: filePath)
-       guard let value = plist?.object(forKey: "BaseUrl") as? String else {
-         fatalError("Couldn't find key 'BASE_URL' in 'Info.plist'.")
-       }
-       return value
-     }
-   }
-    
+    static let dollarSymbol = "USD"
+    static let euroSymbol = "EUR"
+    static let britishPoundSymbol = "GBP"
+    static let egyptPoundSymbol = "EGP"
+    static let canadianDollarSymbol = "CAD"
+    static let kuwaitiDinarSymbol = "KWD"
+    static let saudiRiyalSymbol = "SAR"
+    static let japaneseYenSymbol = "JPY"
+    static let qatarRiyalSymbol = "QAR"
+    static let uaeDirhamSymbol = "AED"
+    static let swissFrancSymbol = "CHF"
+    static let emptyString = ""
+    static let emptySpaceString = " "
+    static let onKey = "On"
+    static let symbolsKey = "symbols"
+    static let ratesKey = "rates"
+    static let baseKey = "base"
+    static let dateFormatString = "yyyy-MM-dd"
+    static let commaString = ","
+    static let accessKey = "access_key"
+}
+
+struct APIConstants {
+    static let symbolsEndPoint = "symbols"
+    static let latestEndPoint = "latest"
+}
+
+struct CellConstants {
+    static let historicalDataCell = "HistoricalDataTableViewCell";
+    static let otherCurrencyDataCell = "OtherCurrencyDataTableViewCell";
 }
